@@ -88,7 +88,7 @@ OAI/NR-U/gnb/openair2/GNB_APP/gnb_config.c
 
 #### ✅ Option 2: Replace Files with Pre-Modified Versions
 
-> Replace the files above with those located in the `Extended_code` folder of this repository.
+> Replace the files above with those located in the [Extended_code](Extended_code) folder of this repository.
 
 This adds **NR-U band support** in OpenAirInterface.
 
