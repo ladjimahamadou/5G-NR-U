@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:         
+    oai-nr-ue:
+        image: oai-nr-ue:nr-u
+        privileged: true
+        network_mode: "host" 
+        container_name: oai-nr-ue
+        environment: 
+            USE_B2XX: 'yes'
+            USE_VOLUMED_CONF: True
+            USE_ADDITIONAL_OPTIONS: -r 106 --numerology 1 --band 47 -C 5875680000 --ue-fo-compensation --nokrnmod  --sa -E --dlsch-parallel 8 --ue-txgain 0 --log_config.global_log_options level,nocolor,time
+        volumes:
+            -  /dev/bus/usb/:/dev/bus/usb/
+            - ./nr-ue.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5  
