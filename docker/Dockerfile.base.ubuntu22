@@ -1,0 +1,85 @@
+FROM ubuntu:jammy AS ran-base
+ARG NEEDED_GIT_PROXY
+ARG TARGETARCH
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Paris
+
+# Installer les paquets requis pour UHD et le développement
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get upgrade --yes && \
+    DEBIAN_FRONTEND=noninteractive apt-get install --yes \
+       build-essential \
+       psmisc \
+       git \
+       gcc-12 \
+       g++-12 \
+       xxd \
+       libpcre2-dev \
+       python3-dev \
+       bison \
+       flex \
+       m4 \
+       libforms-dev \
+       libforms-bin \
+       python3-pip \
+       autoconf \
+       automake \
+       ccache \
+       cmake \
+       cpufrequtils \
+       doxygen \
+       ethtool \
+       inetutils-tools \
+       libboost-all-dev \
+       libncurses-dev \
+       libusb-1.0-0 \
+       libusb-1.0-0-dev \
+       libusb-dev \
+       python3-mako \
+       python3-numpy \
+       python3-requests \
+       python3-scipy \
+       python3-setuptools \
+       python3-ruamel.yaml && \
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 100 --slave /usr/bin/g++ g++ /usr/bin/g++-12 && \
+    pip3 install --ignore-installed pyyaml
+
+# Ajouter Tini pour une meilleure gestion des signaux dans le conteneur
+ENV TINI_VERSION=v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${TARGETARCH} /tini
+RUN chmod +x /tini
+
+# Configurer un proxy GIT si nécessaire
+RUN /bin/bash -c "if [[ -v NEEDED_GIT_PROXY ]]; then git config --global http.proxy $NEEDED_GIT_PROXY; fi"
+
+# Compilation et installation de UHD v4.7.0.0
+WORKDIR /usr/local
+RUN git clone https://github.com/EttusResearch/uhd.git && \
+    cd uhd && \
+    git checkout v4.7.0.0 && \
+    cd host && \
+    mkdir build && cd build && \
+    cmake ../ && \
+    make -j $(nproc) && \
+    make test && \
+    make install && \
+    ldconfig && \
+    uhd_images_downloader
+
+# Copie des fichiers OAI nécessaires
+WORKDIR /oai-ran/cmake_targets/tools
+COPY cmake_targets/tools/build_helper \
+     cmake_targets/tools/uhd-4.x-tdd-patch.diff \
+     ./
+
+WORKDIR /oai-ran/cmake_targets
+COPY cmake_targets/build_oai .
+
+WORKDIR /oai-ran
+COPY oaienv .
+
+# Exécuter build_oai -I pour préparer l'image
+RUN /bin/sh oaienv && \ 
+    cd cmake_targets && \
+    mkdir -p log && \
+    ./build_oai -I 
