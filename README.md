@@ -209,7 +209,7 @@ docker compose down
 
 ## 🧰 Configuration & Documentation
 
-- 🔧 [Performance Mode Guide](performance/README.md)
+- 🔧 [Performance Mode Guide](/performance/README.md)
 
 ### 📁 Configuration Directories
 
