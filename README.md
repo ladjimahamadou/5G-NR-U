@@ -1,5 +1,3 @@
-# 5G-NR-U
-This repository provides a step-by-step guide for implementing unlicensed spectrum bands in a 5G network.
 ## 🔍 About This Repository
 
 This repository contains the **scripts**, **configurations**, and **experimental results** associated with the following article:
@@ -113,16 +111,17 @@ cd ~/your_oai_directory/cmake_targets
 > This script installs Docker and sets up all necessary OAI resources.
 
 ```bash
+cd 5G-NR-U
 chmod +x install_docker.sh
 ./install_docker.sh
 ```
 
-📦 Then, copy the `docker` folder from `5G-NR-U` into the `docker` folder inside your `your_oai_directory`.
+📦 Then, copy the `docker` folder from `5G-NR-U` into the [docker](docker/README.md) folder inside your `your_oai_directory`.
 
 📘 Follow the Docker setup instructions in:
 
 ```bash
-cd /your_oai_directory/home/docker
+cd /your_oai_directory/docker
 ```
 
 Or refer directly to:
@@ -154,7 +153,7 @@ docker compose up -d
 
 ### Step 2: Run gNodeB and UE Containers
 
-> Make sure the USRP B210 is **physically connected** (via USB 3 or better).
+> Make sure the USRP B210 is **physically connected** (via USB 3).
 
 #### 🛰️ Run the gNB:
 
