@@ -116,7 +116,7 @@ chmod +x install_docker.sh
 ./install_docker.sh
 ```
 
-📦 Then, copy the `docker` folder from `5G-NR-U` into the [docker](docker/README.md) folder inside your `your_oai_directory`.
+📦 Then, copy the [docker](docker/README.md) folder from `5G-NR-U` into the `docker` folder inside your `your_oai_directory`.
 
 📘 Follow the Docker setup instructions in:
 
