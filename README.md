@@ -2,9 +2,9 @@
 
 This repository contains the **scripts**, **configurations**, and **experimental results** associated with the following article:
 
-**Article Title**: *Full title of your article* 
-**Submitted to**: *Conference / Journal name* 
-**Submission Date**: dd/mm/yy
+**Article Title**: *Design, Implementation, Performance Evaluation of a Sub-7 GHz 5G NR-U System* 
+**Submitted to**: *Computer Communications* 
+**Submission Date**: 11/05/2025
 
 ---
 
