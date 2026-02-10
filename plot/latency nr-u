@@ -1,0 +1,79 @@
+--------------------------46---------------------------------------------
+
+ladji@ladji-ThinkPad-X13-Gen-1:~/oai-cn5g$ docker exec -it oai-ext-dn ping -c 10 12.1.1.130
+PING 12.1.1.130 (12.1.1.130) 56(84) bytes of data.
+64 bytes from 12.1.1.130: icmp_seq=1 ttl=63 time=12.1 ms
+64 bytes from 12.1.1.130: icmp_seq=2 ttl=63 time=11.6 ms
+64 bytes from 12.1.1.130: icmp_seq=3 ttl=63 time=10.5 ms
+64 bytes from 12.1.1.130: icmp_seq=4 ttl=63 time=9.50 ms
+64 bytes from 12.1.1.130: icmp_seq=5 ttl=63 time=8.51 ms
+64 bytes from 12.1.1.130: icmp_seq=6 ttl=63 time=7.49 ms
+64 bytes from 12.1.1.130: icmp_seq=7 ttl=63 time=6.20 ms
+64 bytes from 12.1.1.130: icmp_seq=8 ttl=63 time=6.07 ms
+64 bytes from 12.1.1.130: icmp_seq=9 ttl=63 time=14.6 ms
+64 bytes from 12.1.1.130: icmp_seq=10 ttl=63 time=13.6 ms
+
+--- 12.1.1.130 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9008ms
+rtt min/avg/max/mdev = 6.072/10.010/14.568/2.816 ms
+
+----------------------n46------------------------
+
+ladji@ladji-ThinkPad-X13-Gen-1:~/oai-cn5g$ docker exec -it oai-ext-dn ping -c 10 12.1.1.130
+PING 12.1.1.130 (12.1.1.130) 56(84) bytes of data.
+64 bytes from 12.1.1.130: icmp_seq=1 ttl=63 time=10.6 ms
+64 bytes from 12.1.1.130: icmp_seq=2 ttl=63 time=9.58 ms
+64 bytes from 12.1.1.130: icmp_seq=3 ttl=63 time=8.57 ms
+64 bytes from 12.1.1.130: icmp_seq=4 ttl=63 time=7.52 ms
+64 bytes from 12.1.1.130: icmp_seq=5 ttl=63 time=6.49 ms
+64 bytes from 12.1.1.130: icmp_seq=6 ttl=63 time=6.21 ms
+64 bytes from 12.1.1.130: icmp_seq=7 ttl=63 time=14.6 ms
+64 bytes from 12.1.1.130: icmp_seq=8 ttl=63 time=13.3 ms
+64 bytes from 12.1.1.130: icmp_seq=9 ttl=63 time=12.6 ms
+64 bytes from 12.1.1.130: icmp_seq=10 ttl=63 time=11.6 ms
+
+--- 12.1.1.130 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9009ms
+rtt min/avg/max/mdev = 6.207/10.095/14.585/2.758 ms
+
+
+
+------------------------n96------------------------
+
+ladji@ladji-ThinkPad-X13-Gen-1:~/oai-cn5g$ docker exec -it oai-ext-dn ping -c 10 12.1.1.130
+PING 12.1.1.130 (12.1.1.130) 56(84) bytes of data.
+64 bytes from 12.1.1.130: icmp_seq=1 ttl=63 time=9.84 ms
+64 bytes from 12.1.1.130: icmp_seq=2 ttl=63 time=8.35 ms
+64 bytes from 12.1.1.130: icmp_seq=3 ttl=63 time=7.35 ms
+64 bytes from 12.1.1.130: icmp_seq=4 ttl=63 time=6.37 ms
+64 bytes from 12.1.1.130: icmp_seq=5 ttl=63 time=5.90 ms
+64 bytes from 12.1.1.130: icmp_seq=6 ttl=63 time=14.4 ms
+64 bytes from 12.1.1.130: icmp_seq=7 ttl=63 time=13.4 ms
+64 bytes from 12.1.1.130: icmp_seq=8 ttl=63 time=12.5 ms
+64 bytes from 12.1.1.130: icmp_seq=9 ttl=63 time=11.5 ms
+64 bytes from 12.1.1.130: icmp_seq=10 ttl=63 time=10.5 ms
+
+--- 12.1.1.130 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9009ms
+rtt min/avg/max/mdev = 5.898/10.011/14.422/2.823 ms
+
+
+------------------------------n78--------------------------------------------
+
+ladji@ladji-ThinkPad-X13-Gen-1:~/oai-cn5g$ docker exec -it oai-ext-dn ping -c 10 12.1.1.130
+PING 12.1.1.130 (12.1.1.130) 56(84) bytes of data.
+64 bytes from 12.1.1.130: icmp_seq=1 ttl=63 time=13.2 ms
+64 bytes from 12.1.1.130: icmp_seq=2 ttl=63 time=12.5 ms
+64 bytes from 12.1.1.130: icmp_seq=3 ttl=63 time=11.5 ms
+64 bytes from 12.1.1.130: icmp_seq=4 ttl=63 time=10.5 ms
+64 bytes from 12.1.1.130: icmp_seq=5 ttl=63 time=9.52 ms
+64 bytes from 12.1.1.130: icmp_seq=6 ttl=63 time=8.57 ms
+64 bytes from 12.1.1.130: icmp_seq=7 ttl=63 time=7.56 ms
+64 bytes from 12.1.1.130: icmp_seq=8 ttl=63 time=6.58 ms
+64 bytes from 12.1.1.130: icmp_seq=9 ttl=63 time=6.05 ms
+64 bytes from 12.1.1.130: icmp_seq=10 ttl=63 time=14.6 ms
+
+--- 12.1.1.130 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9009ms
+rtt min/avg/max/mdev = 6.048/10.052/14.606/2.744 ms
+

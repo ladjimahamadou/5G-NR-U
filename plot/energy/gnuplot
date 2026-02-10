@@ -1,0 +1,138 @@
+
+------------------gnb comparison------------------------------
+gnuplot
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power Consumption(W)" font "Time New Roman,14"
+set xrange[3:11]
+set yrange[0.5:2]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "gNB Power Consumption Comparison" font "Times New Roman, 14"
+plot "gnbn78" title "gNB Power Consumption n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "gnbn96" title " gNB Power Consumption n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "gnbn46" title " gNB Power Consumption n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "gnbn47" title " gNB Power Consumption n47" with linespoint pointsize 2 linewidth 4 pointtype 7
+
+
+
+
+----------------------n78----------------------
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power Consumption(W)" font "Time New Roman,14"
+set xrange[3:11]
+set yrange[0:2]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "gNB Power Consumption" font "Times New Roman, 14"
+plot "gnbn78" title " gNB Power Consumption" with linespoint pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power consumption(W)" font "Time New Roman,14"
+set xrange[0:13]
+set yrange[0:0.07]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "Core Power comsumption" font "Times New Roman, 14"
+plot "amfn78" title "AMF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn78" title "SMF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn78" title "UPF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn78" title "AUSF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn78" title "UDM n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn78" title "UDR n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn78" title "NRF n78" with linespoint pointsize 2 linewidth 4 pointtype 7
+
+
+----------------------n96----------------------
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power Consumption(W)" font "Time New Roman,14"
+set xrange[2:11]
+set yrange[0:2]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "gNB Power Consumption" font "Times New Roman, 14"
+plot "gnbn96" title " gNB Power Consumption" with linespoint pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power consumption(W)" font "Time New Roman,14"
+set xrange[0:13]
+set yrange[0:0.05]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "Core Power comsumption" font "Times New Roman, 14"
+plot "amfn96" title "AMF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn96" title "SMF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn96" title "UPF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn96" title "AUSF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn96" title "UDM n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn96" title "UDR n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn96" title "NRF n96" with linespoint pointsize 2 linewidth 4 pointtype 7
+
+
+
+-----------------------n46--------------------------
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power Consumption(W)" font "Time New Roman,14"
+set xrange[2:11]
+set yrange[0:2]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "gNB Power Consumption" font "Times New Roman, 14"
+plot "gnbn46" title " gNB Power Consumption" with linespoint pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power consumption(W)" font "Time New Roman,14"
+set xrange[0:13]
+set yrange[0:0.07]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "Core Power comsumption" font "Times New Roman, 14"
+plot "amfn46" title "AMF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn46" title "SMF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn46" title "UPF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn46" title "AUSF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn46" title "UDM n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn46" title "UDR n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn46" title "NRF n46" with linespoint pointsize 2 linewidth 4 pointtype 7
+
+-----------------------n47--------------------------
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power Consumption(W)" font "Time New Roman,14"
+set xrange[2:11]
+set yrange[0:2]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "gNB Power Consumption" font "Times New Roman, 14"
+plot "gnbn47" title " gNB Power Consumption" with linespoint pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power consumption(W)" font "Time New Roman,14"
+set xrange[0:13]
+set yrange[0:0.05]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "Core Power comsumption" font "Times New Roman, 14"
+plot "amfn47" title "AMF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn47" title "SMF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn47" title "UPF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn47" title "AUSF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn47" title "UDM n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn47" title "UDR n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn47" title "NRF n47" with linespoint pointsize 2 linewidth 4 pointtype 7
+
+
+
+-------------------core comparison-------------------
+gnuplot
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power Consumption(W)" font "Time New Roman,14"
+set xrange[0:14]
+set yrange[0:0.07]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "Core Power comsumption" font "Times New Roman, 14"
+plot "amfn78" title "AMF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn78" title "SMF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn78" title "UPF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn78" title "AUSF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn78" title "UDM n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn78" title "UDR n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn78" title "NRF n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "amfn96" title "AMF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn96" title "SMF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn96" title "UPF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn96" title "AUSF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn96" title "UDM n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn96" title "UDR n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn96" title "NRF n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "amfn46" title "AMF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn46" title "SMF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn46" title "UPF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn46" title "AUSF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn46" title "UDM n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn46" title "UDR n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn46" title "NRF n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "amfn47" title "AMF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "smfn47" title "SMF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "upfn47" title "UPF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "ausfn47" title "AUSF n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "udmn47" title "UDM n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "udrn47" title "UDR n47" with linespoint pointsize 2 linewidth 4 pointtype 7, "nrfn47" title "NRF n47" with linespoint pointsize 2 linewidth 4 pointtype 7
+
+---------------------------core comparison2---------------
+
+gnuplot
+set xlabel "Time(min)" font "Time New Roman,14"
+set ylabel "Power Consumption(W)" font "Time New Roman,14"
+set xrange[0:11]
+set yrange[0:0.12]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "Core Power comsumption" font "Times New Roman, 14"
+plot "coren78" title "core n78" with linespoint pointsize 2 linewidth 4 pointtype 7, "coren96" title "core n96" with linespoint pointsize 2 linewidth 4 pointtype 7, "coren46" title "core n46" with linespoint pointsize 2 linewidth 4 pointtype 7, "coren47" title "core n47" with linespoint pointsize 2 linewidth 4 pointtype 7
+

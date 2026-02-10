@@ -1,0 +1,256 @@
+
+-----------------------------------n96--------------------------------
+
+
+cat n96dl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl1
+cat n96gdl | grep sec |head -30 |tr - " " |awk '{print $4,$10}' > gdl1
+cat dl1
+cat gdl1
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[30:60]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "UDP FLOW" font "Times New Roman, 14"
+plot "dl1" title " UDP flow n96" with linespoint  pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Jitter(ms)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:0.6]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "JITTER" font "Times New Roman, 14"
+plot "gdl1" title "Jitter n96" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+-----------------------------------n46--------------------------------
+
+
+cat n46dl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl2
+cat n46gdl | grep sec |head -30 |tr - " " |awk '{print $4,$10}' > gdl2
+cat dl2
+cat gdl2
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[30:60]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "UDP FLOW" font "Times New Roman, 14"
+plot "dl2" title " UDP flow n46" with linespoint  pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Jitter(ms)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:0.6]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "JITTER" font "Times New Roman, 14"
+plot "gdl2" title "Jitter n46" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+
+-----------------------------------n47--------------------------------
+
+
+cat n47dl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl3
+cat n47gdl | grep sec |head -30 |tr - " " |awk '{print $4,$10}' > gdl3
+cat dl3
+cat gdl3
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[30:60]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "UDP FLOW" font "Times New Roman, 14"
+plot "dl3" title " UDP flow n47" with linespoint  pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Jitter(ms)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:0.6]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "JITTER" font "Times New Roman, 14"
+plot "gdl3" title "Jitter n47" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+-----------------------------------n78--------------------------------
+
+
+cat n78dl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl4
+cat n78gdl | grep sec |head -30 |tr - " " |awk '{print $4,$10}' > gdl4
+cat dl4
+cat gdl4
+
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[30:70]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "UDP FLOW" font "Times New Roman, 14"
+plot "dl4" title " UDP flow n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Jitter(ms)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:0.6]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "JITTER" font "Times New Roman, 14"
+plot "gdl4" title "Jitter n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+
+----------------------------------------comparaison UDP--------------------------
+gnuplot
+set multiplot layout 1,2
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[30:70]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "UDP FLOW" font "Times New Roman, 14"
+plot "dl1" title " UDP flow n96" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl2" title " UDP flow n46" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl3" title " UDP flow n47" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl4" title " UDP flow n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Jitter(ms)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:0.6]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "JITTER" font "Times New Roman, 14"
+plot "gdl1" title "Jitter n96" with linespoint  pointsize 2 linewidth 4 pointtype 7, "gdl2" title "Jitter n46" with linespoint  pointsize 2 linewidth 4 pointtype 7, "gdl3" title "Jitter n47" with linespoint  pointsize 2 linewidth 4 pointtype 7, "gdl4" title "Jitter n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+----------------------------------------comparaison UDP debit--------------------------
+gnuplot
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[30:70]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "UDP FLOW" font "Times New Roman, 14"
+plot "dl1" title " UDP flow n96" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl2" title " UDP flow n46" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl3" title " UDP flow n47" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl4" title " UDP flow n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+----------------------------------------comparaison UDP gigue--------------------------
+
+gnuplot
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Jitter(ms)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:0.6]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "JITTER" font "Times New Roman, 14"
+plot "gdl1" title "Jitter n96" with linespoint  pointsize 2 linewidth 4 pointtype 7, "gdl2" title "Jitter n46" with linespoint  pointsize 2 linewidth 4 pointtype 7, "gdl3" title "Jitter n47" with linespoint  pointsize 2 linewidth 4 pointtype 7, "gdl4" title "Jitter n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+
+
+
+-----------------------------------TCP------------------------------------------------------
+
+-----------------------------------n96--------------------------------
+
+
+cat n96tdl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl5
+cat dl5
+
+gnuplot
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:60]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "TCP FLOW" font "Times New Roman, 14"
+plot "dl5" title " TCP flow n96" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+
+-----------------------------------n46--------------------------------
+
+
+cat n46tdl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl6
+cat dl6
+
+gnuplot
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[10:70]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "TCP FLOW" font "Times New Roman, 14"
+plot "dl6" title " TCP flow n46" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+-----------------------------------n47--------------------------------
+
+
+cat n47tdl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl7
+cat dl7
+
+gnuplot
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:70]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "TCP FLOW" font "Times New Roman, 14"
+plot "dl7" title " TCP flow n47" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+-----------------------------------n78--------------------------------
+
+
+cat n78tdl | grep sec |head -30 |tr - " " |awk '{print $4,$8}' > dl8
+cat dl8
+
+gnuplot
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:75]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "TCP FLOW" font "Times New Roman, 14"
+plot "dl8" title " TCP flow n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+
+----------------------------------------comparaison TCP debit--------------------------
+
+gnuplot
+set xlabel "Time(sec)" font "Time New Roman,14"
+set ylabel "Throughput(Mbps)" font "Time New Roman,14"
+set xrange[0:32]
+set yrange[0:80]
+set ytics font "Times New Roman, 14"
+set xtics font "Times New Roman, 14"
+set key font "Times New Roman, 14"
+set title "TCP FLOW" font "Times New Roman, 14"
+plot "dl5" title " TCP flow n96" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl6" title " TCP flow n46" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl7" title " TCP flow n47" with linespoint  pointsize 2 linewidth 4 pointtype 7, "dl8" title " TCP flow n78" with linespoint  pointsize 2 linewidth 4 pointtype 7
+
+
+
