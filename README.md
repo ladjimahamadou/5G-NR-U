@@ -269,3 +269,16 @@ Feel free to reach out for any bugs or undocumented behavior.
 
 If you use this repository, in whole or in part, for your research or experimentation, please cite the following publication:
 
+@article{diawara_design_2026,
+	title = {Design, {Implementation}, {Performance} evaluation of a {Sub}-7 {GHz} {5G} {NR}-{U} system},
+	volume = {248},
+	issn = {0140-3664},
+	url = {https://www.sciencedirect.com/science/article/pii/S0140366426000150},
+	doi = {10.1016/j.comcom.2026.108425},
+	urldate = {2026-01-13},
+	journal = {Computer Communications},
+	author = {Diawara, Mahamadou and Faye, Andre},
+	month = feb,
+	year = {2026},
+	pages = {108425},
+}
