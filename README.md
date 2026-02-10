@@ -269,6 +269,7 @@ Feel free to reach out for any bugs or undocumented behavior.
 
 If you use this repository, in whole or in part, for your research or experimentation, please cite the following publication:
 
+```bash
 @article{diawara_design_2026,
 	title = {Design, {Implementation}, {Performance} evaluation of a {Sub}-7 {GHz} {5G} {NR}-{U} system},
 	volume = {248},
@@ -282,3 +283,4 @@ If you use this repository, in whole or in part, for your research or experiment
 	year = {2026},
 	pages = {108425},
 }
+```
