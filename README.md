@@ -1,19 +1,14 @@
 ## 🔍 About This Repository
 
-This repository contains the **scripts**, **configurations**, and **experimental results** associated with the following article:
+This repository contains the **scripts**, **configurations**, and **experimental results** associated with the following published article:
 
-**Article Title**: *Design, Implementation, Performance Evaluation of a Sub-7 GHz 5G NR-U System* 
-**Submitted to**: *Computer Communications* 
-**Submission Date**: 11/05/2025
+**Article Title**: *Design, Implementation, Performance Evaluation of a Sub-7 GHz 5G NR-U System*  
+**Journal**: *Computer Communications* (Elsevier)  
+**Publication Date**: January 12, 2026  
+**DOI**: https://doi.org/10.1016/j.comcom.2026.108425
+
 
 ---
-
-## 🔓 Temporary Access
-
-This repository is made **temporarily public** to allow reviewers to access the source code, in accordance with transparency and reproducibility requirements.
-
-⚠️ **Do not share this link** outside of the review process. 
-🔒 The repository will be made **private again** after the review period.
 
 📧 For any questions, contact the author: diawara.mahamadou@ugb.edu.sn
 
@@ -267,3 +262,10 @@ nb_tx, nb_rx, max_rxgain
 ---
 
 Feel free to reach out for any bugs or undocumented behavior.
+
+---
+
+## To Cite This Paper
+
+If you use this repository, in whole or in part, for your research or experimentation, please cite the following publication:
+
